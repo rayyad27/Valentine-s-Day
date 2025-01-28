@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Quotes</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            color: white;
+            text-align: center;
+            background: url('https://i.imgur.com/0UVJY6U.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        .quote {
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+        button {
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e73370;
+        }
+    </style>
+    <script>
+        const quotes = [
+            "You are the beat of my heart.",
+            "Love is the bridge between two hearts.",
+            "Every love story is beautiful, but ours is my favorite.",
+            "You make my heart smile.",
+            "Love is not about how many days you’ve been together, it’s about how much you love each other every day.",
+            "You are my sunshine on a cloudy day.",
+            "I love you to the moon and back.",
+            "You are the missing piece to my heart."
+        ];
+
+        function displayRandomQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById('quote').innerText = quotes[randomIndex];
+        }
+
+        window.onload = displayRandomQuote;
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Valentine's Day!</h1>
+        <div class="quote" id="quote"></div>
+        <button onclick="displayRandomQuote()">Show Another Quote</button>
+    </div>
+</body>
+</html>
